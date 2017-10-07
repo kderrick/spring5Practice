@@ -1,5 +1,6 @@
 package com.practiceWithSpring5.spring5Practice.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,7 +9,8 @@ import com.practiceWithSpring5.spring5Practice.mail.MockMailSender;
 @RestController
 public class MailController {
 	
-	private MockMailSender mailSender = new MockMailSender();
+	@Autowired
+	private MockMailSender mailSender;
 	
 	@RequestMapping("/mail")
 	public String mail() {
