@@ -2,7 +2,9 @@ package com.practiceWithSpring5.spring5Practice.mail;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 
+@Component("smtp")
 public class smtpMailSender implements MailSender{
 	
 	private static Log log = LogFactory.getLog(smtpMailSender.class);
@@ -12,6 +14,9 @@ public class smtpMailSender implements MailSender{
 		log.info("with subject" + emailSubject);
 		log.info("and body" + emailBody);
 	}
+	
+	
+	
 	
 	
 
