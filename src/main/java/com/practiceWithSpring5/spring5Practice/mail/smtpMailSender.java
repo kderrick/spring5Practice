@@ -2,9 +2,11 @@ package com.practiceWithSpring5.spring5Practice.mail;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("smtp")
+@Qualifier("smtpMail")
 public class smtpMailSender implements MailSender{
 	
 	private static Log log = LogFactory.getLog(smtpMailSender.class);
